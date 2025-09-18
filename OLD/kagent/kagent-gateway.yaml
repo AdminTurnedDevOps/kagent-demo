@@ -1,0 +1,80 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: kagent-tls-secret
+  namespace: kagent
+type: kubernetes.io/tls
+data:
+  # Self-signed certificate for demo purposes
+  # In production, use proper certificates from a CA
+  tls.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM4RENDQWRnQ0NRRGYvVmZxNTgwWjZqQU5CZ2txaGtpRzl3MEJBUXNGQURBNk1Rc3dDUVlEVlFRR0V3SlYKVXpFUU1BNEdBMVVFQ2d3SGMyOXNieTVwYnpFWk1CY0dBMVVFQXd3UWEyVjVZMnh2WVdzdVpHVm1ZWFZzZERBZQpGdzB5TlRBNU1UY3hNelF5TlRoYUZ3MHlOakE5TVRjeE16UXlOVGhhTURveEN6QUpCZ05WQkFZVEFsVlRNUkF3CkRnWURWUVFKREFkemIyeHZMbWx2TVJrd0Z3WURWUVFEREJCclpYbGpiRzloYXk1a1pXWmhkV3gwTUlJQklqQU4KQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBNUhVc1ZONFRtdXZNbzJYdEIxWU03eFFBdmI4RQpQMkY2UXp1SmZ1ZG0rc2JmeWRFK2RwZUsycmQ4cDNmWU5IajIwcE5oVThQRFVXWXl6SURNaWplWGlORFo4N0JOCk5jcmliUnY0R1VKbWhFbmc1YjVEc1NNT0tyd3hEYkZuRWw2Ty9ZNlord2YwWlp6UzNPMTF5YVl1d3ROWFJ5Q3YKQkxRRUxSeC9YeHNHK3pnajRvc25NSE10RS9ac1o1QTBSb0FSNm00MGowdWVkbm1SYXpiSms0UXpXZFVGaHhOVQozaU5LZm9haHRQTmRHaFRzNUdxRDRZbDBoQlVXbllMK3ZFQzdkYTFpZVo0Znk0TGwwc0twV1A2bkFjaEhRZVJCCmRYYmNyWlpBRTBqd2xWUCtiUHA2MmxndjF0WkxMY2VqOFo1MTNkVkJNN3Y2WGxvNDBUcUFiVDNHOXdJREFRQUIKTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFBT1g1ZmVDNVdwVURwS0JjUWpvdnE4a1pXcVR2NCt1bWZHbXdVRgp2QVgwQlp3cjd0MkZ1UWhvVmxEbWZqUUF2TXl2YWZQQ3l2TUw3dVJsVEZXUkhEMEJocU0yK0E4U1czZEc5SDVpCmJKOTNReG5kOFZOTExJVDVKcGZJNlNBczA5MCsySmpxMUtGNEZjbW1rTEUwditLY1psa25GejNIQ2NCVnhVNHoKRjdUOVh1cE1EeGF1MHl6cWViNnFVRkpLOThtVk1SNlNMcTFoaGlDR0tCdGcxcHBzNHVEdTRPQ3BiN0pmU1lQRgpUVHRFMUFsc0NyZ3hzSzJQR3hRQk41TTVVVXlqN0VUcTlnK1Rab1l0NGsxcFRQWEE2Wi92eUIyT1Y5bHUrd1NRCnFPb1Y2b2VkRlZwOWpVa3JKMktEQXpwcDI1L3FSbU9zY01uS0RQY0xaZmdRSTlodAotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+  tls.key: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktnd2dnU2tBZ0VBQW9JQkFRRGtkU3hVM2hPYTY4eWoKWmUwSFZnenZGQUM5dndRL1lYcERPNGwrNTJiNnh0L0owUXAybDRyYXQzeW5kOWcwZVBiU2syRlR3OE5SWmpMTQpnTXlLTjVlSTBObnpzRTAxeXVKdEcvZ1pRbWFFU2VEbHZrT3hJdzRxdkRFTnNXY1NYbzc5anBuN0IvUmxuTkxjCjdYWEpwaTdDMDFkSElLOEV0QVF0SEg5Zkd3YjdPQ1BpaXljd2N5MFQ5bXhua0RSR2dCSHFialNQUzU1MmVaRnIKTnNtVGhETloxUVdIRTFUZUkwcCtocUcwODEwYUZPemthb1BoaVhTRUZSYWRndjY4UUx0MXJXSjVuaC9MZ3VYUwp3cWxZL3FjQnlFZEI1RUYxZHR5dGxrQVRTUENWVS81cytucmFXQy9XMWtzdHg2UHhublhkMVVFenUvcGVXampSCk9vQnRQY2IzQWdNQkFBRUNnZ0VCQU1Ba0tEL01jeksxcE91OEdza3p2emNJWE1NNU4wcFRJbkFQVDhteXR6S3QKTnFSWE12U2c2Y0NmMTdCRnBFb2xmbm1HU0xJWmtGa1NtaURUSnJRTW8xOEhRSGVxekpVMGFKRVpsK1V1cW1nUwpkcHJqRmEyU2JTVFdHRytLeDhSMFVORENNWkVtbEk4dGdVOGNUQmRudENaWmR5czBPdDY2eEZSb2hsdW5zSXh4CmlSWUdEcnl1Y0NNNDlQUTJPaDludTVWdDZ1MXk0TjV5RG83YTd5U0FhWDFGaDRPL3k1Q0dta3Q0RUkzajI1NVQKNzlKRGg2clhMZ05nZURyZHZSR0dhbzk3U2IxMHVKT1ZodkhWN082NDZMNmtIYlZndnBTQnJYYkVSVlhKZk5XMQpnL3M1OXpKbXQvOXlSQWY4c3RjMGN4Ly9TOHRrazNQU1RQTm9TcUo1SThFQ2dZRUErRDNFeVhtWGc4aHBnQnB6CjY5UHBVQ0RtbXNqYXhldUlNOUFPQW1PQXJmTG5xMmJCZ1UwNUJKQ0pYSUNpMHRHWlBSdklvazVZMUluYnhPR24KVWdGRmNFeFJwV2RJSjhzV0NtbUxYK2UwNDVHT1VzRGl1VEVQUG5UamJvOGNLRDVUblZVNmYxSmpDYWxSSGV1dQpIRTBKakdiVU1oV0NIbmFaamloV01yNE8rR0VDZ1lFQTY1a2NvNElqTnh0clM4dkJlaFhHSVlKeGZ2RTBIaHRFCktiNzlRbGY0OE9RZnhoRlVsWFFuMTJpc0N1bFhXeDRPeUNTbThhZzV2MVJ3NWFzei9YbEhQOUgyckZ5bWQ0NkQKaWRDVzBPTVFxcDJha0VxL015VjNjU1l6WWR1U1BSeGh0TVRybEJaUDA1QzlSN1BxRSt6N3Y3YWh2SU16UmhtUApzMlc3TkVDTUhsY0NnWUVBN3Z6WWxYY2dMVmttYUpRUEFmMVQ0emFwakY3T2NEa2ZPWEtWNmlyTldhbys2ejdVCkVKMjl4TzA1c1BxT3h4UE95WXdVRGw0TEd5TlZseWYvbysxaFlvbTNHTnhrRlJ0cHJzQ0owOTBJd3dZQTFSNnAKcDh6WmRqR21PMncvbVdiWHJPSytuSkUrazdDVVRZLzJZWHl4TXFCVXJac1RXQ3lxRExnOHRFRlJ2RUVDZ1lBQQo4dlR5azZ1Z3BUT2hjb2lzL1RsM0dSZHI4M3pLUWtIY0NURHIrMzY5T2E0SEZqckkvMWJKdjFveUVRNlJCMlgzCjJHM3p1MEhBUzQ3STNnK3ZqYldEeEV6Q0ZQMTJyZFJKMGRWSnNpQjNEM3QzNlZVcjE1TExtZVBMR1I5VnI2K1YKRXRZQUdyYm5tMFduN0VtZEd1OUlybXVvWHI3dUlWdzYxTVlVUjg1SXNRS0JnRExTYlJvZmMrMVhJRjdMOEZreQoxU3ZhNEFjV2lWcXZtajBPMjVTa0JkdnpNbVd6UXQ3cmNiSGhlZm9KdTFrUFNlMlhibldqTDE4U2dmb1NxWkdDCk84MmROQUJTeU9IdVpxcVA4UFBkdGhLTVdTeFRZYWdxRnR3ck1NZlJWRHhYd3Q2UHJXbktNOERsVS9mcFhXdFoKeW9xWmtENENrMTNtZnQyMXpwL1J1NDZHCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: kagent-gateway
+  namespace: kagent
+spec:
+  gatewayClassName: gloo-gateway
+  listeners:
+  - name: https
+    # hostname: "*"  # Accept any hostname
+    port: 443
+    protocol: HTTPS
+    tls:
+      mode: Terminate
+      certificateRefs:
+      - name: kagent-tls-secret
+        kind: Secret
+  - name: http
+    # hostname: "*"  # Accept any hostname
+    port: 80
+    protocol: HTTP
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: kagent-route
+  namespace: kagent
+spec:
+  parentRefs:
+  - name: kagent-gateway
+  # No hostname restriction - accept any hostname
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /realms
+    backendRefs:
+    # Proxy keycloak through the same Gateway
+    # For demo purposes only
+    # When someone requests https://GATEWAY_IP/realms/*, proxy it to the keycloak
+    # service in the default namespace on port 8080."
+    # For demos, this avoids the cert/HTTPS headaches
+    - name: keycloak
+      namespace: default
+      port: 8080
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    backendRefs:
+    - name: kagent-enterprise-ui
+      port: 80
+---
+# ReferenceGrant = the permission to do cross-namespace proxying
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: ReferenceGrant
+metadata:
+  name: allow-kagent-to-keycloak
+  namespace: default
+spec:
+  from:
+  - group: gateway.networking.k8s.io
+    kind: HTTPRoute
+    namespace: kagent
+  to:
+  - group: ""
+    kind: Service
+    name: keycloak
